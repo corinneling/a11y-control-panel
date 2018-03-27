@@ -168,12 +168,12 @@ a[data-tooltip][data-placement="left"]::after {
   border-right: none;
   top: 50%;
   right: 100%;
-  margin-top: -6px;
+  margin-top: -8px;
   margin-right: 4px;
 }
 
 a[data-tooltip][data-placement="top"]::before {
-  top: -25%;
+  top: -10%;
   right: 100%;
   margin-right: 10px;
 }
@@ -182,7 +182,7 @@ a[data-tooltip][data-placement="top"]::after {
   border-right: none;
   top: 50%;
   right: 100%;
-  margin-top: -12px;
+  margin-top: -8px;
   margin-right: 4px;
 }
 
