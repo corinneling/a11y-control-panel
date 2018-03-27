@@ -2,39 +2,30 @@
 let mainChildren = document.getElementById("main").children;
 let mainDiv = document.getElementById("main");
 let links = document.querySelectorAll('a');
-let p = mainDiv.getElementsByTagName("p");
+let p = document.querySelectorAll("p");
 
 const aesthetica11y = {
   controlPanelEvents: function() {
-    links[0].addEventListener('click', this.toggleOptions);
-    links[1].addEventListener('click', this.togglePageContrast);
-    links[2].addEventListener('click', this.resetPageContrast);
-    links[3].addEventListener('click', this.decreaseFontSize);
-    links[4].addEventListener('click', this.increaseFontSize);
-    links[5].addEventListener('click', this.originalFontSize);
-    links[6].addEventListener('click', this.toggleFontFamily);
-    links[7].addEventListener('click', this.fixLineHeight);
-    links[8].addEventListener('click', this.fixLineSpacing);
+    let properties = [this.prop0, this.prop1, this.prop2, this.prop3, this.prop4, this.prop5, this.prop6, this.prop7, this.prop8]
+    for (var i = 0; i < links.length; i++) {
+      console.log(links[i].addEventListener('click', properties[i]));
+    }
   },
-  toggleOptions: function() {
+  prop0: function() {
     let tools = document.getElementById('accessibility');
-    let displaySetting = tools.style.display;
     let toolsSVG = document.getElementById('tools-icon');
-
-    if (displaySetting == 'block') {
+    if (tools.style.display == 'block') {
       tools.style.display = 'none';
       toolsSVG.style.backgroundColor = 'rgb(44, 148, 255)';
       toolsSVG.style.fill = 'white';
-      toolsSVG.style.boxShadow = "1px 1px 1px 1px rgba(0,0,0,0.2)"
     } else {
       tools.style.display = 'block';
       toolsSVG.style.backgroundColor = 'white';
       toolsSVG.style.fill = 'rgb(44, 148, 255)';
-      toolsSVG.style.boxShadow = "none"
     }
   },
-  togglePageContrast: function() {
-    var contrastBackground = mainDiv.style.backgroundColor;
+  prop1: function() {
+    let contrastBackground = mainDiv.style.backgroundColor;
 
     if (contrastBackground == 'black') {
       mainDiv.style.backgroundColor = 'white';
@@ -46,12 +37,12 @@ const aesthetica11y = {
       mainDiv.style.color = 'white';
     }
   },
-  resetPageContrast: function() {
+  prop2: function() {
     mainDiv.style.backgroundColor = "";
     document.body.style.backgroundColor = "";
     mainDiv.style.color = "";
   },
-  decreaseFontSize: function() {
+  prop3: function() {
     for (var i = 0; i < mainChildren.length; i++) {
       childrenFont = window.getComputedStyle(mainChildren[i]).getPropertyValue('font-size');
       currentSize = parseFloat(childrenFont);
@@ -59,36 +50,33 @@ const aesthetica11y = {
 
     }
   },
-  increaseFontSize: function() {
+  prop4: function() {
     for (var i = 0; i < mainChildren.length; i++) {
       childrenFont = window.getComputedStyle(mainChildren[i]).getPropertyValue('font-size');
       currentSize = parseFloat(childrenFont);
       mainChildren[i].style.fontSize = (currentSize + 5) + 'px';
     }
   },
-  originalFontSize: function() {
+  prop5: function() {
     for (var i = 0; i < mainChildren.length; i++) {
-      childrenFont = window.getComputedStyle(mainChildren[i]).getPropertyValue('font-size');
-      currentSize = parseFloat(childrenFont);
       mainChildren[i].style.fontSize = "";
     }
   },
-  toggleFontFamily: function() {
-    var fontUsed = mainDiv.style.fontFamily;
-    if (fontUsed == "") {
-      mainDiv.style.fontFamily = "Arial, sans-serif";
-    } else {
-      mainDiv.style.fontFamily = "";
+  prop6: function() {
+    for (i = 0; i < p.length; i++) {
+      p[i].style.letterSpacing = "1px";
     }
   },
-  fixLineHeight: function() {
+  prop7: function() {
     for (i = 0; i < p.length; i++) {
       p[i].style.lineHeight = "200%";
     }
   },
-  fixLineSpacing: function() {
-    for (i = 0; i < p.length; i++) {
-      p[i].style.letterSpacing = "1px";
+  prop8: function() {
+    if (mainDiv.style.fontFamily == "") {
+      mainDiv.style.fontFamily = "Arial, sans-serif";
+    } else {
+      mainDiv.style.fontFamily = "";
     }
   }
 }
