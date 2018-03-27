@@ -165,7 +165,7 @@ a[data-tooltip][data-placement="left"]::after {
   border-right: none;
   top: 50%;
   right: 100%;
-  margin-top: -8px;
+  margin-top: -7px;
   margin-right: 4px;
 }
 
@@ -179,7 +179,7 @@ a[data-tooltip][data-placement="top"]::after {
   border-right: none;
   top: 50%;
   right: 100%;
-  margin-top: -8px;
+  margin-top: -9px;
   margin-right: 4px;
 }
 
@@ -189,11 +189,11 @@ a[data-tooltip][data-placement="top"]::after {
 
 body {
 	background-color: #ccc;
+  color: #fff;
 }
 
 #main {
 	height: 100%;
-	color: #fff;
 	padding: 1em 3em;
   font-family: 'Cinzel', serif;
 }

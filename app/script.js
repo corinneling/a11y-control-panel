@@ -5,6 +5,16 @@ let links = document.querySelectorAll('a');
 let p = document.querySelectorAll("p");
 
 const aesthetica11y = {
+  loadCSS: function() {
+    var head = document.querySelector('head');
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'https://corinneling.github.io/aesthetica11y-control-panel/app/style.css';
+    console.log(link.href);
+    head.appendChild(link);
+    console.log(link);
+  },
   controlPanelEvents: function() {
     let properties = [this.prop0, this.prop1, this.prop2, this.prop3, this.prop4, this.prop5, this.prop6, this.prop7, this.prop8]
     for (var i = 0; i < links.length; i++) {
@@ -25,14 +35,14 @@ const aesthetica11y = {
     }
   },
   prop1: function() {
-    let contrastBackground = mainDiv.style.backgroundColor;
+    let contrastBackground = document.body.style.backgroundColor;
 
     if (contrastBackground == 'black') {
-      mainDiv.style.backgroundColor = 'white';
+      // mainDiv.style.backgroundColor = 'white';
       document.body.style.backgroundColor = 'white';
       mainDiv.style.color = 'black';
     } else {
-      mainDiv.style.backgroundColor = 'black';
+      // mainDiv.style.backgroundColor = 'black';
       document.body.style.backgroundColor = 'black';
       mainDiv.style.color = 'white';
     }
@@ -80,5 +90,5 @@ const aesthetica11y = {
     }
   }
 }
-
+aesthetica11y.loadCSS()
 aesthetica11y.controlPanelEvents();
