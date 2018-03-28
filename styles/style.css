@@ -149,11 +149,11 @@ a[data-tooltip]::before {
   background: #000;
   font-family: 'Open Sans', sans-serif;
   color: #fff;
+  width: 200px;
   font-size: 1em;
   padding: 0.4em 0.8em;
   border-radius: 0.2em;
   margin-top: 9px;
-  white-space: nowrap;
   text-decoration: none;
 }
 
@@ -173,16 +173,17 @@ a[data-tooltip]:hover::before, a[data-tooltip]:hover::after {
 
 /* left tooltip */
 
-a[data-tooltip][data-placement="left"]::before {
-  top: -25%;
+a[aria-label][data-placement="left"]::before {
+  top: 0;
   right: 100%;
+  width: 10rem;
   margin-right: 10px;
 }
 
 a[data-tooltip][data-placement="left"]::after {
   border-left-color: #000;
   border-right: none;
-  top: 50%;
+  top: calc( 50% - 3px );
   right: 100%;
   margin-top: -6px;
   margin-right: 4px;
@@ -197,7 +198,7 @@ a[data-tooltip][data-placement="top"]::before {
 a[data-tooltip][data-placement="top"]::after {
   border-left-color: #000;
   border-right: none;
-  top: 50%;
+  top: calc( 50% - 3px );
   right: 100%;
   margin-top: -9px;
   margin-right: 4px;

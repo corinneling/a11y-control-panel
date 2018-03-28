@@ -52,7 +52,7 @@ const aesthetica11y = {
         <ul class="aesthetica11y-list-of-icons-for-page-controls">
         ${controls.map(controls =>
                 `<li>
-                <a href="#" data-tooltip="${controls.tooltip}" data-placement="left">
+                <a href="#" aria-label="${controls.tooltip}" data-tooltip="${controls.tooltip}" data-placement="left">
                 ${controls.icon}
                 </a>
                 </li>`
