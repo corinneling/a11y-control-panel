@@ -149,9 +149,9 @@ a[data-tooltip]::before {
   background: #000;
   font-family: 'Open Sans', sans-serif;
   color: #fff;
-  width: 200px;
   font-size: 1em;
   padding: 0.4em 0.8em;
+  white-space: nowrap;
   border-radius: 0.2em;
   margin-top: 9px;
   text-decoration: none;
@@ -176,7 +176,6 @@ a[data-tooltip]:hover::before, a[data-tooltip]:hover::after {
 a[aria-label][data-placement="left"]::before {
   top: 0;
   right: 100%;
-  width: 10rem;
   margin-right: 10px;
 }
 
