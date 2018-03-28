@@ -189,7 +189,7 @@ a[data-tooltip][data-placement="left"]::after {
 }
 
 a[data-tooltip][data-placement="top"]::before {
-  top: -10%;
+  top: -0.7em;
   right: 100%;
   margin-right: 10px;
 }
