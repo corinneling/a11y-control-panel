@@ -60,8 +60,6 @@ const aesthetica11y = {
      </ul>
      </div>
      </div>
-
-
     `;
     document.body.innerHTML += markup;
   },
@@ -86,22 +84,17 @@ const aesthetica11y = {
     }
   },
   prop1: function() {
-    let mainDiv = document.getElementById("main");
-    let contrastBackground = document.body.style.backgroundColor;
-
-    if (contrastBackground == 'black') {
+    if (document.body.style.backgroundColor == 'black') {
       document.body.style.backgroundColor = 'white';
-      mainDiv.style.color = 'black';
+      document.body.style.color = 'black';
     } else {
       document.body.style.backgroundColor = 'black';
-      mainDiv.style.color = 'white';
+      document.body.style.color = 'white';
     }
   },
   prop2: function() {
-    let mainDiv = document.getElementById("main");
-    mainDiv.style.backgroundColor = "";
     document.body.style.backgroundColor = "";
-    mainDiv.style.color = "";
+    document.body.style.color = "";
   },
   prop3: function() {
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p")
@@ -120,9 +113,9 @@ const aesthetica11y = {
     }
   },
   prop5: function() {
-    let mainChildren = document.getElementById("main").children;
-    for (var i = 0; i < mainChildren.length; i++) {
-      mainChildren[i].style.fontSize = "";
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p")
+    for (var i = 0; i < txt.length; i++) {
+      txt[i].style.fontSize = "";
     }
   },
   prop6: function() {
@@ -138,20 +131,12 @@ const aesthetica11y = {
     }
   },
   prop8: function() {
-    let h = document.querySelectorAll("h1, h2, h3, h4, h5, h6")
-    let p = document.querySelectorAll("p");
-    for (i = 0; i < p.length; i++) {
-      if (p[i].style.fontFamily == "") {
-        p[i].style.fontFamily = "Dyslexie";
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p")
+    for (i = 0; i < txt.length; i++) {
+      if (txt[i].style.fontFamily == "") {
+        txt[i].style.fontFamily = "Dyslexie";
       } else {
-        p[i].style.fontFamily = "";
-      }
-    }
-    for (i = 0; i < h.length; i++) {
-      if (h[i].style.fontFamily == "") {
-        h[i].style.fontFamily = "Dyslexie";
-      } else {
-        h[i].style.fontFamily = "";
+        txt[i].style.fontFamily = "";
       }
     }
   }
