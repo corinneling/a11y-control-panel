@@ -104,20 +104,19 @@ const aesthetica11y = {
     mainDiv.style.color = "";
   },
   prop3: function() {
-    let mainChildren = document.getElementById("main").children;
-    for (var i = 0; i < mainChildren.length; i++) {
-      childrenFont = window.getComputedStyle(mainChildren[i]).getPropertyValue('font-size');
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p")
+    for (var i = 0; i < txt.length; i++) {
+      childrenFont = window.getComputedStyle(txt[i]).getPropertyValue('font-size');
       currentSize = parseFloat(childrenFont);
-      mainChildren[i].style.fontSize = (currentSize - 5) + 'px';
-
+      txt[i].style.fontSize = (currentSize - 2) + 'px';
     }
   },
   prop4: function() {
-    let mainChildren = document.getElementById("main").children;
-    for (var i = 0; i < mainChildren.length; i++) {
-      childrenFont = window.getComputedStyle(mainChildren[i]).getPropertyValue('font-size');
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p")
+    for (var i = 0; i < txt.length; i++) {
+      childrenFont = window.getComputedStyle(txt[i]).getPropertyValue('font-size');
       currentSize = parseFloat(childrenFont);
-      mainChildren[i].style.fontSize = (currentSize + 5) + 'px';
+      txt[i].style.fontSize = (currentSize + 2) + 'px';
     }
   },
   prop5: function() {
