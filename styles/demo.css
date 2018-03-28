@@ -1,6 +1,6 @@
 /* Page Styling */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Sanchez');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,900');
 body {
   background-color: #fff4e4;
   color: #004f9e;
@@ -11,29 +11,33 @@ body {
   width: 80%;
   padding: 5em 0;
   margin: auto;
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+  margin: 5em auto;
+}
+
+hr {
+    border: 2px solid;
+    margin: 2em 0.8em;
+    width: 6em;
 }
 
 h1 {
-  font-size: 46px;
-  font-family: 'Sanchez', serif;
-  font-weight: 400;
+  font-size: 4em;
+  font-weight: 900;
   margin: 0.4em;
 }
 
 h4 {
-  font-size: 28px;
-  font-family: 'Sanchez', serif;
+  font-size: 1.6em;
   font-weight: 300;
   margin: 0.4em;
 }
 
-/* span {
-  color: rgb(44, 148, 255);
-} */
 
 p {
-  font-size: 18px;
+  font-size: 1em;
   margin: 0.8em;
 }
