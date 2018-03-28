@@ -184,7 +184,7 @@ a[data-tooltip][data-placement="left"]::after {
   border-right: none;
   top: 50%;
   right: 100%;
-  margin-top: -7px;
+  margin-top: -6px;
   margin-right: 4px;
 }
 
