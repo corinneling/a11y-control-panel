@@ -174,7 +174,7 @@ a[data-tooltip]:hover::before, a[data-tooltip]:hover::after {
 /* left tooltip */
 
 a[aria-label][data-placement="left"]::before {
-  top: 0;
+  top: -0.7em;
   right: 100%;
   margin-right: 10px;
 }
