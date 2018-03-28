@@ -1,4 +1,4 @@
-# Aesthetica11y Control Panel (in production)
+# Aesthetically Accessible Control Panel (in development)
 ### Change the styling of any webpage to make it more accessible
 
 [Demo](https://corinneling.github.io/aesthetica11y-control-panel/test.html)
