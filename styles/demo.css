@@ -2,8 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500,900');
 body {
-  background-color: #fff4e4;
-  color: #004f9e;
+  background-color: #e6e5de;
+  color: #555;
 }
 
 #main {
@@ -25,6 +25,7 @@ hr {
 }
 
 h1 {
+  color: rgb(75, 143, 214);
   font-size: 4em;
   font-weight: 900;
   margin: 0.4em;
