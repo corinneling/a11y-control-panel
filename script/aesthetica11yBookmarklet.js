@@ -139,13 +139,15 @@ const aesthetica11y = {
     }
   },
   prop8: function() {
-    let mainDiv = document.getElementById("main");
-    if (mainDiv.style.fontFamily == "") {
-      mainDiv.style.fontFamily = "Dyslexie";
-      document.body.style.fontFamily = "Dyslexie";
+    // let mainDiv = document.getElementById("main");
+    let h = document.querySelectorAll("h1, h2, h3, h4, h5, h6")
+    let p = document.querySelectorAll("p");
+    if (p.style.fontFamily == "" && h.style.fontFamily == "") {
+      p.style.fontFamily = "Dyslexie";
+      h.style.fontFamily = "Dyslexie";
     } else {
-      mainDiv.style.fontFamily = "";
-      document.body.style.fontFamily = "";
+      p.style.fontFamily = "";
+      h.style.fontFamily = "";
     }
   }
 }
