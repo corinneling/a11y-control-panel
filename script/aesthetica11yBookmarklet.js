@@ -5,7 +5,7 @@ const aesthetica11y = {
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = 'https://corinneling.github.io/aesthetica11y-control-panel/styles/style.css';
+    link.href = 'https://corinneling.github.io/a11y-control-panel/styles/style.css';
     head.appendChild(link);
   },
   loadHTML: function() {
