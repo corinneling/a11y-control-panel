@@ -141,7 +141,7 @@ const aesthetica11y = {
   prop8: function() {
     let mainDiv = document.getElementById("main");
     if (mainDiv.style.fontFamily == "") {
-      mainDiv.style.fontFamily = "Arial, sans-serif";
+      mainDiv.style.fontFamily = "Dyslexie";
     } else {
       mainDiv.style.fontFamily = "";
     }

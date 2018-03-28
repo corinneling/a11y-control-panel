@@ -9,6 +9,11 @@
   }
 }
 
+@font-face {
+  font-family: "Dyslexie";
+  src: url(https://corinneling.github.io/aesthetica11y-control-panel/styles/Dyslexie_Regular_15369.ttf) format("truetype");
+}
+
 .aesthetica11y-receptacle-for-main-aesthetica11y-icon {
   position: fixed;
   cursor: pointer;
