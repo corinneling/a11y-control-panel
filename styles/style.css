@@ -30,7 +30,7 @@
   z-index: 99;
 }
 
-#user-tools svg:hover {
+.aesthetica11y-receptacle-for-main-aesthetica11y-icon svg:hover {
   transform: scale(1.12);
 }
 
@@ -55,6 +55,7 @@
   width: 100%;
   padding: 0.5em;
   font-family: #fff;
+  z-index: 99;
 }
 
 .aesthetica11y-list-of-icons-for-page-controls li:nth-child(1) {
@@ -114,6 +115,7 @@
   cursor: pointer;
   height: 0.3em;
   width: 0.3em;
+  z-index: 99;
 }
 
 .aesthetica11y-list-of-icons-for-page-controls {
