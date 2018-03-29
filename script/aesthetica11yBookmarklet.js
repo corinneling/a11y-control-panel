@@ -110,23 +110,23 @@ const aesthetica11y = {
     }
   },
   prop4: function() {
-    let p = document.querySelectorAll("p");
-    for (i = 0; i < p.length; i++) {
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p");
+    for (i = 0; i < txt.length; i++) {
       // p[i].style.letterSpacing = "1px";
-      if (p[i].style.letterSpacing == "") {
-        p[i].style.letterSpacing = "1px";
+      if (txt[i].style.letterSpacing == "") {
+        txt[i].style.letterSpacing = "1px";
       } else {
-        p[i].style.letterSpacing = "";
+        txt[i].style.letterSpacing = "";
       }
     }
   },
   prop5: function() {
-    let p = document.querySelectorAll("p");
-    for (i = 0; i < p.length; i++) {
-      if (p[i].style.lineHeight == "") {
-        p[i].style.lineHeight = "200%";
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p");
+    for (i = 0; i < txt.length; i++) {
+      if (txt[i].style.lineHeight == "") {
+        txt[i].style.lineHeight = "180%";
       } else {
-        p[i].style.lineHeight = "";
+        txt[i].style.lineHeight = "";
       }
     }
   },
