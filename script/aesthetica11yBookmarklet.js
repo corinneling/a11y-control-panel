@@ -10,6 +10,10 @@ const aesthetica11y = {
   },
   loadHTML: function() {
     const controls = [{
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"/></svg>`,
+        tooltip: 'Change coloring of this control panel'
+      },
+      {
         icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg>`,
         tooltip: 'Switch page contrast to dark or light'
       },
@@ -61,7 +65,7 @@ const aesthetica11y = {
   },
   controlPanelEvents: function() {
     let links = document.querySelectorAll('a');
-    let properties = [this.prop10, this.prop0, this.prop1, this.prop2, this.prop3, this.prop4, this.prop5, this.prop6, this.prop7]
+    let properties = [this.prop10, this.prop0, this.prop11, this.prop1,this.prop2, this.prop3, this.prop4, this.prop5, this.prop6, this.prop7]
     for (var i = 0; i < links.length; i++) {
       links[i].addEventListener('click', properties[i]);
     }
@@ -80,6 +84,18 @@ const aesthetica11y = {
       tools.style.display = 'block';
       toolsSVG.style.backgroundColor = 'white';
       toolsSVG.style.fill = 'rgb(44, 148, 255)';
+    }
+  },
+  prop11: function() {
+    let icons = document.querySelectorAll('svg');
+    for (i = 0; i < icons.length; i++) {
+      if (icons.style.backgroundColor = 'rgb(44, 148, 255)';) {
+        icons.style.backgroundColor = 'white';
+        icons.style.fill = 'rgb(44, 148, 255)';
+      } else {
+        icons.style.backgroundColor = 'rgb(44, 148, 255)';
+        icons.style.fill = 'white';
+      }
     }
   },
   prop1: function() {
