@@ -84,9 +84,11 @@ const aesthetica11y = {
   },
   prop1: function() {
     if (document.body.style.backgroundColor == 'black') {
+      document.body.style.backgroundImage = "none";
       document.body.style.backgroundColor = 'white';
       document.body.style.color = 'black';
     } else {
+      document.body.style.backgroundImage = "none";
       document.body.style.backgroundColor = 'black';
       document.body.style.color = 'white';
     }
@@ -149,6 +151,7 @@ const aesthetica11y = {
       p[i].style.lineHeight = "";
       p[i].style.letterSpacing = "";
     }
+    document.body.style.backgroundImage = "";
     document.body.style.backgroundColor = "";
     document.body.style.color = "";
   }
