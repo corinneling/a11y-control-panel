@@ -68,7 +68,7 @@ const aesthetica11y = {
   },
   prop10: function() {
     return null;
-  }
+  },
   prop0: function() {
     let tools = document.getElementById('accessibility');
     let toolsSVG = document.getElementById('tools-icon');
