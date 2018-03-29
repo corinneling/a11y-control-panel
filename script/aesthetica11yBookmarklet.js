@@ -61,7 +61,7 @@ const aesthetica11y = {
   },
   controlPanelEvents: function() {
     let links = document.querySelectorAll('a');
-    let properties = [this.prop10, this.prop0, this.prop1, this.prop2, this.prop3, this.prop4, this.prop5, this.prop6, this.prop7]
+    let properties = [this.prop0, this.prop1, this.prop2, this.prop3, this.prop4, this.prop5, this.prop6, this.prop7]
     for (var i = 1; i < links.length; i++) {
       links[i].addEventListener('click', properties[i]);
     }
