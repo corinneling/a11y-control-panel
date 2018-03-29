@@ -61,11 +61,14 @@ const aesthetica11y = {
   },
   controlPanelEvents: function() {
     let links = document.querySelectorAll('a');
-    let properties = [this.prop0, this.prop1, this.prop2, this.prop3, this.prop4, this.prop5, this.prop6, this.prop7]
+    let properties = [this.prop10, this.prop0, this.prop1, this.prop2, this.prop3, this.prop4, this.prop5, this.prop6, this.prop7]
     for (var i = 0; i < links.length; i++) {
       links[i].addEventListener('click', properties[i]);
     }
   },
+  prop10: function() {
+    return null;
+  }
   prop0: function() {
     let tools = document.getElementById('accessibility');
     let toolsSVG = document.getElementById('tools-icon');
