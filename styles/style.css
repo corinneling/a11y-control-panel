@@ -127,8 +127,11 @@
   padding: 0.4em;
   transition: .5s;
   fill: rgb(44, 148, 255);
-  height: 1.1em;
-  width: 1.1em;
+  height: 16px;
+  width: 16px;
+  overflow: auto;
+  transform-origin: 0;
+  box-sizing: initial;
 }
 
 .aesthetica11y-list-of-icons-for-page-controls a svg:hover {
@@ -138,6 +141,7 @@
 
 a[data-tooltip] {
   position: fixed;
+  z-index: 2000;
 }
 
 a[data-tooltip]::before, a[data-tooltip]::after {
@@ -184,7 +188,7 @@ a[aria-label][data-placement="left"]::before {
 a[data-tooltip][data-placement="left"]::after {
   border-left-color: #000;
   border-right: none;
-  top: calc( 50% - 3px );
+  top: calc( 50% - 3px);
   right: 100%;
   margin-top: -6px;
   margin-right: 4px;

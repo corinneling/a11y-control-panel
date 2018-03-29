@@ -67,7 +67,7 @@ const aesthetica11y = {
   },
   controlPanelEvents: function() {
     let links = document.querySelectorAll('#a11y-control-panel-wrapper a');
-    let properties = [ this.prop0, this.prop1, this.prop2, this.prop3, this.prop4, this.prop5, this.prop6, this.prop7, this.prop8]
+    let properties = [this.prop0, this.prop1, this.prop2, this.prop3, this.prop4, this.prop5, this.prop6, this.prop7, this.prop8]
     for (var i = 0; i < links.length; i++) {
       links[i].addEventListener('click', properties[i]);
     }
@@ -99,18 +99,21 @@ const aesthetica11y = {
     }
   },
   prop2: function() {
-    if (document.body.style.backgroundColor == 'black') {
-      document.body.style.backgroundImage = "none";
-      document.body.style.backgroundColor = 'white';
-      document.body.style.color = 'black';
-    } else {
-      document.body.style.backgroundImage = "none";
-      document.body.style.backgroundColor = 'black';
-      document.body.style.color = 'white';
+    const bdy = document.querySelectorAll("body, div");
+    for (var i = 0; i < bdy.length; i++) {
+      if (bdy[i].style.backgroundColor == 'black') {
+        bdy[i].style.backgroundImage = "none";
+        bdy[i].style.backgroundColor = 'white';
+        bdy[i].style.color = 'black';
+      } else {
+        bdy[i].style.backgroundImage = "none";
+        bdy[i].style.backgroundColor = 'black';
+        bdy[i].style.color = 'white';
+      }
     }
   },
   prop3: function() {
-    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p")
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span")
     for (var i = 0; i < txt.length; i++) {
       childrenFont = window.getComputedStyle(txt[i]).getPropertyValue('font-size');
       currentSize = parseFloat(childrenFont);
@@ -118,7 +121,7 @@ const aesthetica11y = {
     }
   },
   prop4: function() {
-    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p")
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span")
     for (var i = 0; i < txt.length; i++) {
       childrenFont = window.getComputedStyle(txt[i]).getPropertyValue('font-size');
       currentSize = parseFloat(childrenFont);
@@ -126,7 +129,7 @@ const aesthetica11y = {
     }
   },
   prop5: function() {
-    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p");
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
     for (i = 0; i < txt.length; i++) {
       // p[i].style.letterSpacing = "1px";
       if (txt[i].style.letterSpacing == "") {
@@ -137,7 +140,7 @@ const aesthetica11y = {
     }
   },
   prop6: function() {
-    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p");
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
     for (i = 0; i < txt.length; i++) {
       if (txt[i].style.lineHeight == "") {
         txt[i].style.lineHeight = "180%";
@@ -147,7 +150,7 @@ const aesthetica11y = {
     }
   },
   prop7: function() {
-    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p");
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
     for (i = 0; i < txt.length; i++) {
       if (txt[i].style.fontFamily == "") {
         txt[i].style.fontFamily = "Dyslexie";
@@ -157,7 +160,7 @@ const aesthetica11y = {
     }
   },
   prop8: function() {
-    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p");
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
     let p = document.querySelectorAll("p");
     for (var i = 0; i < txt.length; i++) {
       txt[i].style.fontSize = "";
