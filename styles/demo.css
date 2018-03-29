@@ -24,6 +24,30 @@ hr {
     width: 6em;
 }
 
+.link-container {
+  margin: 2em 0em;
+}
+
+.bookmarklet-link {
+  background-color: rgb(75, 143, 214);
+  color: #e6e5de;
+  font-size: 1.2em;
+  padding: 0.4em 1em;
+  border-radius: 0.2em;
+  text-decoration: none;
+  margin-bottom: 1em;
+}
+
+.bookmarklet-link:hover {
+  background-color: rgba(75, 143, 214, 0.8);
+
+}
+
+span {
+  margin-left: 1em;
+  font-style: italic;
+}
+
 h1 {
   color: rgb(75, 143, 214);
   font-size: 4em;
