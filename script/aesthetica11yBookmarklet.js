@@ -26,20 +26,20 @@ const aesthetica11y = {
         tooltip: 'Increase font size'
       },
       {
-        icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.333 512"><path d="M500.333 0h-47.411c-6.853 0-12.314 5.729-11.986 12.574l3.966 82.759C399.416 41.899 331.672 8 256.001 8 119.34 8 7.899 119.526 8 256.187 8.101 393.068 119.096 504 256 504c63.926 0 122.202-24.187 166.178-63.908 5.113-4.618 5.354-12.561.482-17.433l-33.971-33.971c-4.466-4.466-11.64-4.717-16.38-.543C341.308 415.448 300.606 432 256 432c-97.267 0-176-78.716-176-176 0-97.267 78.716-176 176-176 60.892 0 114.506 30.858 146.099 77.8l-101.525-4.865c-6.845-.328-12.574 5.133-12.574 11.986v47.411c0 6.627 5.373 12 12 12h200.333c6.627 0 12-5.373 12-12V12c0-6.627-5.373-12-12-12z"/></svg>`,
-        tooltip: 'Refresh to original font size'
-      },
-      {
         icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M16 32h416c8.837 0 16 7.163 16 16v96c0 8.837-7.163 16-16 16h-35.496c-8.837 0-16-7.163-16-16V96H261.743v128H296c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H152c-8.837 0-16-7.163-16-16v-32c0-8.837 7.163-16 16-16h34.257V96H67.496v48c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16V48c0-8.837 7.163-16 16-16zm427.315 340.682l-80.001-79.995C353.991 283.365 336 288.362 336 304v48H112v-47.99c0-14.307-17.307-21.319-27.314-11.313L4.685 372.692c-6.245 6.245-6.247 16.379 0 22.626l80.001 79.995C94.009 484.635 112 479.638 112 464v-48h224v47.99c0 14.307 17.307 21.319 27.314 11.313l80.001-79.995c6.245-6.245 6.248-16.379 0-22.626z"/></svg>`,
-        tooltip: 'Increase spacing between paragraph letters'
+        tooltip: 'Increase spacing between text letters'
       },
       {
         icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M16 32h288c8.837 0 16 7.163 16 16v96c0 8.837-7.163 16-16 16h-35.496c-8.837 0-16-7.163-16-16V96h-54.761v320H232c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H88c-8.837 0-16-7.163-16-16v-32c0-8.837 7.163-16 16-16h34.257V96H67.496v48c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16V48c0-8.837 7.163-16 16-16zm475.308 4.685l79.995 80.001C581.309 126.693 574.297 144 559.99 144H512v224h48c15.639 0 20.635 17.991 11.313 27.314l-79.995 80.001c-6.247 6.247-16.381 6.245-22.626 0l-79.995-80.001C378.691 385.307 385.703 368 400.01 368H448V144h-48c-15.639 0-20.635-17.991-11.313-27.314l79.995-80.001c6.247-6.248 16.381-6.245 22.626 0z"/></svg>`,
-        tooltip: 'Increase spacing paragraph between lines'
+        tooltip: 'Increase spacing between text lines'
       },
       {
         icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M152 416h-24.013l26.586-80.782H292.8L319.386 416H296c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h136c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-26.739L275.495 42.746A16 16 0 0 0 260.382 32h-72.766a16 16 0 0 0-15.113 10.746L42.739 416H16c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h136c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16zm64.353-271.778c4.348-15.216 6.61-28.156 7.586-34.644.839 6.521 2.939 19.476 7.727 34.706l41.335 124.006h-98.619l41.971-124.068z"/></svg>`,
         tooltip: 'Change page text to Dyslexie font'
+      },
+      {
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.333 512"><path d="M500.333 0h-47.411c-6.853 0-12.314 5.729-11.986 12.574l3.966 82.759C399.416 41.899 331.672 8 256.001 8 119.34 8 7.899 119.526 8 256.187 8.101 393.068 119.096 504 256 504c63.926 0 122.202-24.187 166.178-63.908 5.113-4.618 5.354-12.561.482-17.433l-33.971-33.971c-4.466-4.466-11.64-4.717-16.38-.543C341.308 415.448 300.606 432 256 432c-97.267 0-176-78.716-176-176 0-97.267 78.716-176 176-176 60.892 0 114.506 30.858 146.099 77.8l-101.525-4.865c-6.845-.328-12.574 5.133-12.574 11.986v47.411c0 6.627 5.373 12 12 12h200.333c6.627 0 12-5.373 12-12V12c0-6.627-5.373-12-12-12z"/></svg>`,
+        tooltip: 'Refresh page styling'
       }
     ];
     // And then create our markup:
@@ -113,31 +113,46 @@ const aesthetica11y = {
     }
   },
   prop5: function() {
-    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p")
-    for (var i = 0; i < txt.length; i++) {
-      txt[i].style.fontSize = "";
+    let p = document.querySelectorAll("p");
+    for (i = 0; i < p.length; i++) {
+      // p[i].style.letterSpacing = "1px";
+      if (p[i].style.letterSpacing == "") {
+        p[i].style.letterSpacing = "1px";
+      } else {
+        p[i].style.letterSpacing = "";
+      }
     }
   },
   prop6: function() {
     let p = document.querySelectorAll("p");
     for (i = 0; i < p.length; i++) {
-      p[i].style.letterSpacing = "1px";
+      if (p[i].style.lineHeight == "") {
+        p[i].style.lineHeight = "200%";
+      } else {
+        p[i].style.lineHeight = "";
+      }
     }
   },
   prop7: function() {
-    let p = document.querySelectorAll("p");
-    for (i = 0; i < p.length; i++) {
-      p[i].style.lineHeight = "200%";
-    }
-  },
-  prop8: function() {
-    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p")
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p");
     for (i = 0; i < txt.length; i++) {
       if (txt[i].style.fontFamily == "") {
         txt[i].style.fontFamily = "Dyslexie";
       } else {
         txt[i].style.fontFamily = "";
       }
+    }
+  },
+  prop8: function() {
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p");
+    let p = document.querySelectorAll("p");
+    for (var i = 0; i < txt.length; i++) {
+      txt[i].style.fontSize = "";
+      txt[i].style.fontFamily = "";
+    }
+    for (i = 0; i < p.length; i++) {
+      p[i].style.lineHeight = "";
+      p[i].style.letterSpacing = "";
     }
   }
 }
