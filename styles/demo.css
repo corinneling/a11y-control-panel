@@ -1,27 +1,54 @@
 /* Page Styling */
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500,900');
+
 body {
   background-color: #e6e5de;
   color: #555;
+
+}
+
+
+h1 {
+  color: rgb(75, 143, 214);
+  font-size: 4em;
+  font-weight: 900;
+  /* margin: 0.4em 0; */
+}
+
+h4 {
+  font-size: 1.6em;
+  font-weight: 300;
+  margin: 0.4em 0;
+}
+
+p {
+  font-size: 1em;
+  margin: 0.8em 0;
+}
+
+
+span {
+  font-style: italic;
 }
 
 #main {
   height: 100%;
   width: 80%;
-  padding: 5em 0;
+  /* padding: 1em 0; */
   margin: auto;
   font-family: 'Montserrat', sans-serif;
 }
 
 .title {
-  margin: 5em auto;
+  margin: 5em auto 2em;
 }
 
 hr {
-    border: 2px solid;
-    margin: 2em 0.8em;
-    width: 6em;
+  border: 2px solid;
+  background: #444;
+  margin: 2em 0;
+  width: 6em;
 }
 
 .drag-icon {
@@ -49,29 +76,10 @@ hr {
 
 .bookmarklet-link:hover {
   background-color: rgba(75, 143, 214, 0.8);
-
 }
 
-span {
-  margin-left: 1em;
-  font-style: italic;
-}
-
-h1 {
-  color: rgb(75, 143, 214);
-  font-size: 4em;
+.instructions {
   font-weight: 900;
-  margin: 0.4em;
-}
-
-h4 {
-  font-size: 1.6em;
-  font-weight: 300;
-  margin: 0.4em;
-}
-
-
-p {
-  font-size: 1em;
-  margin: 0.8em;
+  font-size: 2em;
+  margin: 1.5em 0;
 }
