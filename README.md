@@ -13,3 +13,5 @@ _Controls Include:_
 * Increate Letter-Spacing
 * Increase Line-Height
 * Change Text to a Readable Font
+
+I used <a href="https://fontawesome.com/license">Font Awesome</a> for the icons 
