@@ -44,6 +44,7 @@ const aesthetica11y = {
     ];
     // And then create our markup:
     const markup = `
+    <div id="a11y-control-panel-wrapper">
     <a data-tooltip="Panel to Control Page Styling" data-placement="top" id="user-tools" class="aesthetica11y-receptacle-for-main-aesthetica11y-icon">
     <svg id="tools-icon" class="main-aesthetica11y-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 48c114.953 0 208 93.029 208 208 0 114.953-93.029 208-208 208-114.953 0-208-93.029-208-208 0-114.953 93.029-208 208-208m0-40C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 56C149.961 64 64 149.961 64 256s85.961 192 192 192 192-85.961 192-192S362.039 64 256 64zm0 44c19.882 0 36 16.118 36 36s-16.118 36-36 36-36-16.118-36-36 16.118-36 36-36zm117.741 98.023c-28.712 6.779-55.511 12.748-82.14 15.807.851 101.023 12.306 123.052 25.037 155.621 3.617 9.26-.957 19.698-10.217 23.315-9.261 3.617-19.699-.957-23.316-10.217-8.705-22.308-17.086-40.636-22.261-78.549h-9.686c-5.167 37.851-13.534 56.208-22.262 78.549-3.615 9.255-14.05 13.836-23.315 10.217-9.26-3.617-13.834-14.056-10.217-23.315 12.713-32.541 24.185-54.541 25.037-155.621-26.629-3.058-53.428-9.027-82.141-15.807-8.6-2.031-13.926-10.648-11.895-19.249s10.647-13.926 19.249-11.895c96.686 22.829 124.283 22.783 220.775 0 8.599-2.03 17.218 3.294 19.249 11.895 2.029 8.601-3.297 17.219-11.897 19.249z"/></svg>
     </a>
@@ -60,18 +61,16 @@ const aesthetica11y = {
      </ul>
      </div>
      </div>
+     </div>
     `;
     document.body.innerHTML += markup;
   },
   controlPanelEvents: function() {
-    let links = document.querySelectorAll('a');
-    let properties = [this.prop10, this.prop0, this.prop11, this.prop1,this.prop2, this.prop3, this.prop4, this.prop5, this.prop6, this.prop7]
+    let links = document.querySelectorAll('#a11y-control-panel-wrapper a');
+    let properties = [ this.prop0, this.prop1, this.prop2, this.prop3, this.prop4, this.prop5, this.prop6, this.prop7, this.prop8]
     for (var i = 0; i < links.length; i++) {
       links[i].addEventListener('click', properties[i]);
     }
-  },
-  prop10: function() {
-    return null;
   },
   prop0: function() {
     let tools = document.getElementById('accessibility');
@@ -86,19 +85,20 @@ const aesthetica11y = {
       toolsSVG.style.fill = 'rgb(44, 148, 255)';
     }
   },
-  prop11: function() {
-    let icons = document.querySelectorAll('svg');
+  prop1: function() {
+    let icons = document.querySelectorAll('.aesthetica11y-list-of-icons-for-page-controls a svg');
+    let toolsSVG = document.getElementById('tools-icon');
     for (i = 0; i < icons.length; i++) {
-      if (icons.style.backgroundColor = 'rgb(44, 148, 255)';) {
-        icons.style.backgroundColor = 'white';
-        icons.style.fill = 'rgb(44, 148, 255)';
+      if (icons[i].style.backgroundColor == "") {
+        icons[i].style.backgroundColor = "rgb(44, 148, 255)";
+        icons[i].style.fill = "white";
       } else {
-        icons.style.backgroundColor = 'rgb(44, 148, 255)';
-        icons.style.fill = 'white';
+        icons[i].style.backgroundColor = "";
+        icons[i].style.fill = "";
       }
     }
   },
-  prop1: function() {
+  prop2: function() {
     if (document.body.style.backgroundColor == 'black') {
       document.body.style.backgroundImage = "none";
       document.body.style.backgroundColor = 'white';
@@ -109,7 +109,7 @@ const aesthetica11y = {
       document.body.style.color = 'white';
     }
   },
-  prop2: function() {
+  prop3: function() {
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p")
     for (var i = 0; i < txt.length; i++) {
       childrenFont = window.getComputedStyle(txt[i]).getPropertyValue('font-size');
@@ -117,7 +117,7 @@ const aesthetica11y = {
       txt[i].style.fontSize = (currentSize - 2) + 'px';
     }
   },
-  prop3: function() {
+  prop4: function() {
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p")
     for (var i = 0; i < txt.length; i++) {
       childrenFont = window.getComputedStyle(txt[i]).getPropertyValue('font-size');
@@ -125,7 +125,7 @@ const aesthetica11y = {
       txt[i].style.fontSize = (currentSize + 2) + 'px';
     }
   },
-  prop4: function() {
+  prop5: function() {
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p");
     for (i = 0; i < txt.length; i++) {
       // p[i].style.letterSpacing = "1px";
@@ -136,7 +136,7 @@ const aesthetica11y = {
       }
     }
   },
-  prop5: function() {
+  prop6: function() {
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p");
     for (i = 0; i < txt.length; i++) {
       if (txt[i].style.lineHeight == "") {
@@ -146,7 +146,7 @@ const aesthetica11y = {
       }
     }
   },
-  prop6: function() {
+  prop7: function() {
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p");
     for (i = 0; i < txt.length; i++) {
       if (txt[i].style.fontFamily == "") {
@@ -156,7 +156,7 @@ const aesthetica11y = {
       }
     }
   },
-  prop7: function() {
+  prop8: function() {
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p");
     let p = document.querySelectorAll("p");
     for (var i = 0; i < txt.length; i++) {
