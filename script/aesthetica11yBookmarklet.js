@@ -65,7 +65,7 @@ const aesthetica11y = {
     for (var i = 1; i <= links.length; i++) {
       links[i].addEventListener('click', properties[i]);
     }
-  }
+  },
   prop0: function() {
     let tools = document.getElementById('accessibility');
     let toolsSVG = document.getElementById('tools-icon');
