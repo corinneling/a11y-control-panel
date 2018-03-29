@@ -14,10 +14,6 @@ const aesthetica11y = {
         tooltip: 'Switch page contrast to dark or light'
       },
       {
-        icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M497.941 273.941c18.745-18.745 18.745-49.137 0-67.882l-160-160c-18.745-18.745-49.136-18.746-67.883 0l-256 256c-18.745 18.745-18.745 49.137 0 67.882l96 96A48.004 48.004 0 0 0 144 480h356c6.627 0 12-5.373 12-12v-40c0-6.627-5.373-12-12-12H355.883l142.058-142.059zm-302.627-62.627l137.373 137.373L265.373 416H150.628l-80-80 124.686-124.686z"/></svg>`,
-        tooltip: 'Switch back to original page contrast'
-      },
-      {
         icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M424 318.2c13.3 0 24-10.7 24-24v-76.4c0-13.3-10.7-24-24-24H24c-13.3 0-24 10.7-24 24v76.4c0 13.3 10.7 24 24 24h400z"/></svg>`,
         tooltip: 'Decrease font size'
       },
@@ -65,7 +61,7 @@ const aesthetica11y = {
   },
   controlPanelEvents: function() {
     let links = document.querySelectorAll('a');
-    let properties = [this.prop0, this.prop1, this.prop2, this.prop3, this.prop4, this.prop5, this.prop6, this.prop7, this.prop8]
+    let properties = [this.prop0, this.prop1, this.prop2, this.prop3, this.prop4, this.prop5, this.prop6, this.prop7]
     for (var i = 0; i < links.length; i++) {
       links[i].addEventListener('click', properties[i]);
     }
@@ -93,10 +89,6 @@ const aesthetica11y = {
     }
   },
   prop2: function() {
-    document.body.style.backgroundColor = "";
-    document.body.style.color = "";
-  },
-  prop3: function() {
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p")
     for (var i = 0; i < txt.length; i++) {
       childrenFont = window.getComputedStyle(txt[i]).getPropertyValue('font-size');
@@ -104,7 +96,7 @@ const aesthetica11y = {
       txt[i].style.fontSize = (currentSize - 2) + 'px';
     }
   },
-  prop4: function() {
+  prop3: function() {
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p")
     for (var i = 0; i < txt.length; i++) {
       childrenFont = window.getComputedStyle(txt[i]).getPropertyValue('font-size');
@@ -112,7 +104,7 @@ const aesthetica11y = {
       txt[i].style.fontSize = (currentSize + 2) + 'px';
     }
   },
-  prop5: function() {
+  prop4: function() {
     let p = document.querySelectorAll("p");
     for (i = 0; i < p.length; i++) {
       // p[i].style.letterSpacing = "1px";
@@ -123,7 +115,7 @@ const aesthetica11y = {
       }
     }
   },
-  prop6: function() {
+  prop5: function() {
     let p = document.querySelectorAll("p");
     for (i = 0; i < p.length; i++) {
       if (p[i].style.lineHeight == "") {
@@ -133,7 +125,7 @@ const aesthetica11y = {
       }
     }
   },
-  prop7: function() {
+  prop6: function() {
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p");
     for (i = 0; i < txt.length; i++) {
       if (txt[i].style.fontFamily == "") {
@@ -143,7 +135,7 @@ const aesthetica11y = {
       }
     }
   },
-  prop8: function() {
+  prop7: function() {
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p");
     let p = document.querySelectorAll("p");
     for (var i = 0; i < txt.length; i++) {
@@ -154,6 +146,8 @@ const aesthetica11y = {
       p[i].style.lineHeight = "";
       p[i].style.letterSpacing = "";
     }
+    document.body.style.backgroundColor = "";
+    document.body.style.color = "";
   }
 }
 
