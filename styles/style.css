@@ -36,13 +36,13 @@
 
 /* was .a11y-container */
 
-.aesthetica11y-receptacle-for-aesthetica11y-user-control-panel {
+.aesthetica11y-list-of-icons-for-page-controls {
   width: 50px;
   height: 300px;
   z-index: 2000;
   position: fixed;
   right: 1.25em;
-  top: 4em;
+  top: 3em;
 }
 
 #accessibility {
