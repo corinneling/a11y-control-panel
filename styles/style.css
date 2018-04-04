@@ -136,6 +136,7 @@
 
 .aesthetica11y-list-of-icons-for-page-controls a svg:hover {
   fill: #fff;
+  cursor: default;
   background-color: rgb(44, 148, 255);
 }
 
