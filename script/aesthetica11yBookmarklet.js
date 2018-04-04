@@ -160,6 +160,7 @@ const aesthetica11y = {
   prop8: function() {
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
     let p = document.querySelectorAll("p");
+    let bdy = document.querySelectorAll("body, div");
     for (var i = 0; i < txt.length; i++) {
       txt[i].style.fontSize = "";
       txt[i].style.fontFamily = "";
@@ -168,9 +169,11 @@ const aesthetica11y = {
       p[i].style.lineHeight = "";
       p[i].style.letterSpacing = "";
     }
-    document.body.style.backgroundImage = "";
-    document.body.style.backgroundColor = "";
-    document.body.style.color = "";
+    for (var i = 0; i < bdy.length; i++) {
+        bdy[i].style.backgroundImage = "";
+        bdy[i].style.backgroundColor = "";
+        bdy[i].style.color = "";
+    }
   }
 }
 
