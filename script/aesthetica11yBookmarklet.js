@@ -101,22 +101,26 @@ const aesthetica11y = {
     }
   },
   prop2: function() {
-    const bdy = document.querySelectorAll("body, div");
+    let bdy = document.querySelectorAll("body, div");
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
+    let p = document.querySelectorAll("p");
     for (var i = 0; i < bdy.length; i++) {
       if (bdy[i].style.backgroundColor == 'black') {
         bdy[i].style.backgroundImage = "none";
         bdy[i].style.backgroundColor = 'white';
         bdy[i].style.color = 'black';
+        txt[i].style.color = 'black';
       } else {
         bdy[i].style.backgroundImage = "none";
         bdy[i].style.backgroundColor = 'black';
         bdy[i].style.color = 'white';
+        txt[i].style.color = 'white';
       }
     }
   },
   prop3: function() {
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span")
-    for (var i = 0; i < txt.length; i++) {
+    for (let i = 0; i < txt.length; i++) {
       childrenFont = window.getComputedStyle(txt[i]).getPropertyValue('font-size');
       currentSize = parseFloat(childrenFont);
       txt[i].style.fontSize = (currentSize - 2) + 'px';
@@ -187,6 +191,8 @@ const aesthetica11y = {
         bdy[i].style.backgroundImage = "";
         bdy[i].style.backgroundColor = "";
         bdy[i].style.color = "";
+        txt[i].style.color = "";
+        p[i].style.color = "";
     }
   }
 }
