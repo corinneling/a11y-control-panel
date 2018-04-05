@@ -115,7 +115,7 @@ const aesthetica11y = {
     }
   },
   prop3: function() {
-    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span, a")
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span")
     for (var i = 0; i < txt.length; i++) {
       childrenFont = window.getComputedStyle(txt[i]).getPropertyValue('font-size');
       currentSize = parseFloat(childrenFont);
@@ -123,7 +123,7 @@ const aesthetica11y = {
     }
   },
   prop4: function() {
-    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span, a")
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span")
     for (var i = 0; i < txt.length; i++) {
       childrenFont = window.getComputedStyle(txt[i]).getPropertyValue('font-size');
       currentSize = parseFloat(childrenFont);
@@ -141,7 +141,7 @@ const aesthetica11y = {
     }
   },
   prop6: function() {
-    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span, a");
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
     for (i = 0; i < txt.length; i++) {
       // p[i].style.letterSpacing = "1px";
       if (txt[i].style.letterSpacing == "") {
@@ -152,7 +152,7 @@ const aesthetica11y = {
     }
   },
   prop7: function() {
-    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span, a");
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
     for (i = 0; i < txt.length; i++) {
       if (txt[i].style.lineHeight == "") {
         txt[i].style.lineHeight = "180%";
@@ -162,7 +162,7 @@ const aesthetica11y = {
     }
   },
   prop8: function() {
-    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span, a");
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
     for (i = 0; i < txt.length; i++) {
       if (txt[i].style.fontFamily == "") {
         txt[i].style.fontFamily = "Dyslexie";
