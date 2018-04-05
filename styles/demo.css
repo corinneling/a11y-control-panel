@@ -30,6 +30,10 @@ span {
   font-style: italic;
 }
 
+a {
+  text-decoration: none;
+}
+
 #main {
   height: 100%;
   width: 80%;

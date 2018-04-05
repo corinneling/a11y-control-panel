@@ -26,6 +26,10 @@ const aesthetica11y = {
         tooltip: 'Increase font size'
       },
       {
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.264 388.24c-91.669 0-156.603-51.165-156.603-151.392V64H39.37c-8.837 0-16-7.163-16-16V16c0-8.837 7.163-16 16-16h137.39c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16h-28.813v172.848c0 53.699 28.314 79.444 76.317 79.444 46.966 0 75.796-25.434 75.796-79.965V64h-28.291c-8.837 0-16-7.163-16-16V16c0-8.837 7.163-16 16-16h136.868c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16h-28.291v172.848c0 99.405-64.881 151.392-156.082 151.392zM16 448h416c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16v-32c0-8.837 7.163-16 16-16z"/></svg>`,
+        tooltip: 'Add underline to links'
+      },
+      {
         icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M16 32h416c8.837 0 16 7.163 16 16v96c0 8.837-7.163 16-16 16h-35.496c-8.837 0-16-7.163-16-16V96H261.743v128H296c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H152c-8.837 0-16-7.163-16-16v-32c0-8.837 7.163-16 16-16h34.257V96H67.496v48c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16V48c0-8.837 7.163-16 16-16zm427.315 340.682l-80.001-79.995C353.991 283.365 336 288.362 336 304v48H112v-47.99c0-14.307-17.307-21.319-27.314-11.313L4.685 372.692c-6.245 6.245-6.247 16.379 0 22.626l80.001 79.995C94.009 484.635 112 479.638 112 464v-48h224v47.99c0 14.307 17.307 21.319 27.314 11.313l80.001-79.995c6.245-6.245 6.248-16.379 0-22.626z"/></svg>`,
         tooltip: 'Increase spacing between text letters'
       },
@@ -65,7 +69,7 @@ const aesthetica11y = {
   },
   controlPanelEvents: function() {
     let links = document.querySelectorAll('#a11y-control-panel-wrapper a');
-    let properties = [this.prop0, this.prop1, this.prop2, this.prop3, this.prop4, this.prop5, this.prop6, this.prop7, this.prop8]
+    let properties = [this.prop0, this.prop1, this.prop2, this.prop3, this.prop4, this.prop5, this.prop6, this.prop7, this.prop8, this.prop9]
     for (var i = 0; i < links.length; i++) {
       links[i].addEventListener('click', properties[i]);
     }
@@ -111,7 +115,7 @@ const aesthetica11y = {
     }
   },
   prop3: function() {
-    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span")
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span, a")
     for (var i = 0; i < txt.length; i++) {
       childrenFont = window.getComputedStyle(txt[i]).getPropertyValue('font-size');
       currentSize = parseFloat(childrenFont);
@@ -119,7 +123,7 @@ const aesthetica11y = {
     }
   },
   prop4: function() {
-    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span")
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span, a")
     for (var i = 0; i < txt.length; i++) {
       childrenFont = window.getComputedStyle(txt[i]).getPropertyValue('font-size');
       currentSize = parseFloat(childrenFont);
@@ -127,7 +131,17 @@ const aesthetica11y = {
     }
   },
   prop5: function() {
-    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
+    let a = document.querySelectorAll("a")
+    for (var i = 0; i < a.length; i++) {
+      if(a[i].style.textDecoration == ""){
+        a[i].style.textDecoration = "underline";
+      } else {
+        a[i].style.textDecoration = "";
+      }
+    }
+  },
+  prop6: function() {
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span, a");
     for (i = 0; i < txt.length; i++) {
       // p[i].style.letterSpacing = "1px";
       if (txt[i].style.letterSpacing == "") {
@@ -137,8 +151,8 @@ const aesthetica11y = {
       }
     }
   },
-  prop6: function() {
-    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
+  prop7: function() {
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span, a");
     for (i = 0; i < txt.length; i++) {
       if (txt[i].style.lineHeight == "") {
         txt[i].style.lineHeight = "180%";
@@ -147,8 +161,8 @@ const aesthetica11y = {
       }
     }
   },
-  prop7: function() {
-    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
+  prop8: function() {
+    let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span, a");
     for (i = 0; i < txt.length; i++) {
       if (txt[i].style.fontFamily == "") {
         txt[i].style.fontFamily = "Dyslexie";
@@ -157,7 +171,7 @@ const aesthetica11y = {
       }
     }
   },
-  prop8: function() {
+  prop9: function() {
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
     let p = document.querySelectorAll("p");
     let bdy = document.querySelectorAll("body, div");
