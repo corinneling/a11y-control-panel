@@ -18,7 +18,8 @@
   position: fixed;
   cursor: pointer;
   right:2em;
-  top: 2em;
+  top: 1.7em;
+  cursor: default;
 }
 
 .main-aesthetica11y-icon {
