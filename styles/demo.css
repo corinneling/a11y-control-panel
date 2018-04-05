@@ -1,33 +1,29 @@
 /* Page Styling */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:500,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,700');
 
 body {
-  background-color: #e6e5de;
-  color: #555;
+  background-color: #f1ede9;
+  color: #444;
+  text-align: center;
 }
 
 h1 {
-  color: rgb(75, 143, 214);
+  color: #fff;
   font-size: 4em;
-  font-weight: 900;
-  /* margin: 0.4em 0; */
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 h4 {
   font-size: 1.6em;
   font-weight: 300;
-  margin: 0.4em 0;
+  margin: 0.6em 0;
 }
 
 p {
   font-size: 1em;
   margin: 0.8em 0;
-}
-
-
-span {
-  font-style: italic;
 }
 
 a {
@@ -37,13 +33,48 @@ a {
 #main {
   height: 100%;
   width: 80%;
-  /* padding: 1em 0; */
   margin: auto;
   font-family: 'Montserrat', sans-serif;
 }
+.left {
+  text-align: left;
+  width: 30%;
+  height: 300px;
+  padding: 0 1em;
+  margin-right: 3%;
+  float: left;
+  background-color: #fff;
+}
+
+.left h4 {
+  position: relative;
+  top: 2em;
+  padding: 1em;
+  left: 0em;
+  line-height: 150%;
+}
+
+.right {
+  background-color: #fff;
+  text-align: left;
+  width: 63%;
+  height: 300px;
+  float: left;
+}
+
+.right p {
+  position: relative;
+  top: 4.8em;
+  left: 0.5em;
+  padding: 0 3em;
+  line-height: 150%;
+}
 
 .title {
-  margin: 5em auto 2em;
+    background-color: rgb(75, 143, 214);
+    margin: 5em auto 2em;
+    padding: 8%;
+    text-align: center;
 }
 
 hr {
@@ -63,14 +94,16 @@ hr {
 }
 
 .link-container {
-  margin: 2em 0em;
+  position: relative;
+  top: 2.5em;
+  margin: 5em 0em;
 }
 
 .bookmarklet-link {
   background-color: rgb(75, 143, 214);
   color: #fff;
   font-size: 1.2em;
-  padding: 0.4em 1em;
+  padding: 0.8em 15.3em;
   border-radius: 0.2em;
   text-decoration: none;
   margin-bottom: 1em;
@@ -81,7 +114,7 @@ hr {
 }
 
 .instructions {
-  font-weight: 900;
-  font-size: 2em;
+  font-weight: 700;
+  font-size: 1.2em;
   margin: 1.5em 0;
 }
