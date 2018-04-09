@@ -100,7 +100,8 @@ const aesthetica11y = {
       }
     }
   },
-  prop2: function() {
+  prop2: function(e) {
+    e.preventDefault();
     let bdy = document.querySelectorAll("body, div");
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
     let p = document.querySelectorAll("p");
@@ -118,7 +119,8 @@ const aesthetica11y = {
       }
     }
   },
-  prop3: function() {
+  prop3: function(e) {
+    e.preventDefault();    
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span")
     for (let i = 0; i < txt.length; i++) {
       childrenFont = window.getComputedStyle(txt[i]).getPropertyValue('font-size');
@@ -126,7 +128,8 @@ const aesthetica11y = {
       txt[i].style.fontSize = (currentSize - 2) + 'px';
     }
   },
-  prop4: function() {
+  prop4: function(e) {
+    e.preventDefault();    
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span")
     for (var i = 0; i < txt.length; i++) {
       childrenFont = window.getComputedStyle(txt[i]).getPropertyValue('font-size');
@@ -134,7 +137,8 @@ const aesthetica11y = {
       txt[i].style.fontSize = (currentSize + 2) + 'px';
     }
   },
-  prop5: function() {
+  prop5: function(e) {
+    e.preventDefault();    
     let a = document.querySelectorAll("a")
     for (var i = 0; i < a.length; i++) {
       if(a[i].style.textDecoration == ""){
@@ -144,7 +148,8 @@ const aesthetica11y = {
       }
     }
   },
-  prop6: function() {
+  prop6: function(e) {
+    e.preventDefault();    
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
     for (i = 0; i < txt.length; i++) {
       // p[i].style.letterSpacing = "1px";
@@ -155,7 +160,8 @@ const aesthetica11y = {
       }
     }
   },
-  prop7: function() {
+  prop7: function(e) {
+    e.preventDefault();    
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
     for (i = 0; i < txt.length; i++) {
       if (txt[i].style.lineHeight == "") {
@@ -165,7 +171,8 @@ const aesthetica11y = {
       }
     }
   },
-  prop8: function() {
+  prop8: function(e) {
+    e.preventDefault();    
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
     for (i = 0; i < txt.length; i++) {
       if (txt[i].style.fontFamily == "") {
@@ -175,7 +182,9 @@ const aesthetica11y = {
       }
     }
   },
-  prop9: function() {
+  prop9: function(e) {
+    e.preventDefault();
+    
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
     let p = document.querySelectorAll("p");
     let bdy = document.querySelectorAll("body, div");
