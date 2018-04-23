@@ -168,7 +168,7 @@ a[data-tooltip]::before {
   font-family: 'Open Sans', sans-serif;
   color: #fff;
   font-size: 1em;
-  padding: 0.4em 0.8em;
+  padding: 0.1em 0.8em;
   white-space: nowrap;
   border-radius: 0.2em;
   margin-top: 9px;
@@ -192,7 +192,7 @@ a[data-tooltip]:hover::before, a[data-tooltip]:hover::after {
 /* left tooltip */
 
 a[aria-label][data-placement="left"]::before {
-  top: -0.64em;
+  bottom: 0.5em;
   right: 100%;
   margin-right: 10px;
 }
@@ -207,8 +207,9 @@ a[data-tooltip][data-placement="left"]::after {
 }
 
 a[data-tooltip][data-placement="top"]::before {
-  top: -0.35em;
+  top: 0.28em;
   right: 100%;
+  padding: 0.4em 0.8em;
   margin-right: 10px;
 }
 
