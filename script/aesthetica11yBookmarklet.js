@@ -100,11 +100,11 @@ const aesthetica11y = {
       }
     }
   },
-  iterate: function(selector, callback) {
-    // for loop
-    // place callback in for loop
-    // callback takes parameter of element
-  },
+  // iterate: function(selector, callback) {
+  //   // for loop
+  //   // place callback in for loop
+  //   // callback takes parameter of element
+  // },
   prop2: function(e) {
     e.preventDefault();
     // run bdy and txt  
