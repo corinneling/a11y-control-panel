@@ -1,6 +1,6 @@
 /* Accessibility Controls */
 :root {
-  --icon-right: 4.6em;
+  --icon-right: 4em;
 }
 
 @keyframes drop {
@@ -41,12 +41,12 @@
 /* was .a11y-container */
 
 .aesthetica11y-list-of-icons-for-page-controls {
-  width: 50px;
-  height: 320px;
-  z-index: 2000;
-  position: fixed;
-  right: 1.25em;
-  top: 3em;
+    z-index: 2000;
+    position: fixed;
+    right: 0;
+    top: 3em;
+    font-size: 0.9em;
+    margin-top: 1.35em;
 }
 
 #accessibility {
