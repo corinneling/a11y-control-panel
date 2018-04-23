@@ -79,12 +79,12 @@ const aesthetica11y = {
     let toolsSVG = document.getElementById('tools-icon');
     if (tools.style.display == 'block') {
       tools.style.display = 'none';
-      toolsSVG.style.backgroundColor = 'rgb(44, 148, 255)';
+      toolsSVG.style.backgroundColor = '#1F78D1';
       toolsSVG.style.fill = 'white';
     } else {
       tools.style.display = 'block';
       toolsSVG.style.backgroundColor = 'white';
-      toolsSVG.style.fill = 'rgb(44, 148, 255)';
+      toolsSVG.style.fill = '#1F78D1';
     }
   },
   prop1: function() {
@@ -92,7 +92,7 @@ const aesthetica11y = {
     let toolsSVG = document.getElementById('tools-icon');
     for (i = 0; i < icons.length; i++) {
       if (icons[i].style.backgroundColor == "") {
-        icons[i].style.backgroundColor = "rgb(44, 148, 255)";
+        icons[i].style.backgroundColor = "#1F78D1";
         icons[i].style.fill = "white";
       } else {
         icons[i].style.backgroundColor = "";
@@ -100,11 +100,16 @@ const aesthetica11y = {
       }
     }
   },
+  iterate: function(selector, callback) {
+    // for loop
+    // place callback in for loop
+    // callback takes parameter of element
+  },
   prop2: function(e) {
     e.preventDefault();
+    // run bdy and txt  
     let bdy = document.querySelectorAll("body, div");
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
-    let p = document.querySelectorAll("p");
     for (var i = 0; i < bdy.length; i++) {
       if (bdy[i].style.backgroundColor == 'black') {
         bdy[i].style.backgroundImage = "none";
@@ -183,8 +188,7 @@ const aesthetica11y = {
     }
   },
   prop9: function(e) {
-    e.preventDefault();
-    
+    e.preventDefault();    
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
     let p = document.querySelectorAll("p");
     let bdy = document.querySelectorAll("body, div");

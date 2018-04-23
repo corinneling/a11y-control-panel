@@ -1,4 +1,7 @@
 /* Accessibility Controls */
+:root {
+  --icon-right: 4.6em;
+}
 
 @keyframes drop {
   0% {
@@ -24,7 +27,7 @@
 
 .main-aesthetica11y-icon {
   fill: #fff;
-  background-color: rgb(44, 148, 255);
+  background-color: #1F78D1;  /* AA - 4.50 */
   height: 42px;
   transition: .2s;
   border-radius: 100px;
@@ -60,56 +63,56 @@
 }
 
 .aesthetica11y-list-of-icons-for-page-controls li:nth-child(1) {
-  top: 4%;
-  right: 2.85em;
+  top: 0.6em;
+  right: var(--icon-right);
   animation: drop 0.2s ease-in;
 }
 
 .aesthetica11y-list-of-icons-for-page-controls li:nth-child(2) {
-  top: 14%;
-  right: 2.85em;
+  top: 2.8em;
+  right: var(--icon-right);
   animation: drop 0.4s ease-in-out;
 }
 
 .aesthetica11y-list-of-icons-for-page-controls li:nth-child(3) {
-  top: 24%;
-  right: 2.85em;
+  top: 5em;
+  right: var(--icon-right);
   animation: drop 0.6s ease-in;
 }
 
 .aesthetica11y-list-of-icons-for-page-controls li:nth-child(4) {
-  top: 34%;
-  right: 2.85em;
+  top: 7.2em;
+  right: var(--icon-right);
   animation: drop 0.8s ease-in;
 }
 
 .aesthetica11y-list-of-icons-for-page-controls li:nth-child(5) {
-  top: 44%;
-  right: 2.85em;
+  top: 9.4em;
+  right: var(--icon-right);
   animation: drop 1s ease-in;
 }
 
 .aesthetica11y-list-of-icons-for-page-controls li:nth-child(6) {
-  top: 54%;
-  right: 2.85em;
+  top: 11.6em;
+  right: var(--icon-right);
   animation: drop 1.1s ease-in;
 }
 
 .aesthetica11y-list-of-icons-for-page-controls li:nth-child(7) {
-  top: 64%;
-  right: 2.85em;
+  top: 13.8em;
+  right: var(--icon-right);
   animation: drop 1.2s ease-in;
 }
 
 .aesthetica11y-list-of-icons-for-page-controls li:nth-child(8) {
-  top: 74%;
-  right: 2.85em;
+  top: 16em;
+  right: var(--icon-right);
   animation: drop 1.3s ease-in;
 }
 
 .aesthetica11y-list-of-icons-for-page-controls li:nth-child(9) {
-  top: 84%;
-  right: 2.85em;
+  top: 18.2em;
+  right: var(--icon-right);
   animation: drop 1.4s ease-in;
 }
 
@@ -133,18 +136,19 @@
   background-color: #fff;
   padding: 0.4em;
   transition: .5s;
-  fill: rgb(44, 148, 255);
+  fill: #1F78D1;
   height: 18px;
   width: 18px;
   overflow: auto;
   transform-origin: 0;
   box-sizing: initial;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.15);
 }
 
 .aesthetica11y-list-of-icons-for-page-controls a svg:hover {
   fill: #fff;
   cursor: default;
-  background-color: rgb(44, 148, 255);
+  background-color: #1F78D1;
 }
 
 a[data-tooltip] {
@@ -216,5 +220,3 @@ a[data-tooltip][data-placement="top"]::after {
   margin-top: -9px;
   margin-right: 4px;
 }
-
-/* tooltips */
