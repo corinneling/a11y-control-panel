@@ -84,6 +84,7 @@ section {
 
 .contact {
   grid-column: span 2;
+  background-color: #fff;
   box-shadow: var(--shadow);
 }
 

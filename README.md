@@ -13,5 +13,3 @@ _Controls Include:_
 * Increase Line-Height
 * Change Text to a Readable Font
 * Reset page styling
-
-I used <a href="https://fontawesome.com/license">Font Awesome</a> for the icons 
