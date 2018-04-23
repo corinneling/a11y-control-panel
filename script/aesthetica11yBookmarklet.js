@@ -108,7 +108,7 @@ const aesthetica11y = {
   prop2: function(e) {
     e.preventDefault();
     // run bdy and txt  
-    let bdy = document.querySelectorAll("body, div");
+    let bdy = document.querySelectorAll("body, div, section");
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
     for (var i = 0; i < bdy.length; i++) {
       if (bdy[i].style.backgroundColor == 'black') {
@@ -191,7 +191,7 @@ const aesthetica11y = {
     e.preventDefault();    
     let txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span");
     let p = document.querySelectorAll("p");
-    let bdy = document.querySelectorAll("body, div");
+    let bdy = document.querySelectorAll("body, div, section");
     for (var i = 0; i < txt.length; i++) {
       txt[i].style.fontSize = "";
       txt[i].style.fontFamily = "";
