@@ -1,6 +1,6 @@
 /* Accessibility Controls */
 :root {
-  --icon-right: 4em;
+  --icon-right: 4.4em;
 }
 
 @keyframes drop {
@@ -137,8 +137,8 @@
   padding: 0.4em;
   transition: .5s;
   fill: #1F78D1;
-  height: 18px;
-  width: 18px;
+  height: 19px;
+  width: 19px;
   overflow: auto;
   transform-origin: 0;
   box-sizing: initial;
