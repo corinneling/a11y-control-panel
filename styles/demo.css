@@ -2,86 +2,115 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500,700');
 
+/*
+  
+  Color contrast tool:
+  http://jxnblk.com/colorable/ 
+  I used the tool to compare the variables colors with a white background
+
+*/
+
+:root {
+  --light: #1F78D1;  /* AA - 4.50 */
+  --dark: #1E4E6B;
+  --white: #fff;
+  --grey: #444;     /* AAA - 9.74 */
+  --half: 0.5em;
+  --shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
 body {
-  background-color: #f1ede9;
-  color: #444;
-  text-align: center;
+  background-color: var(--white);
+  color: var(--grey);
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+  letter-spacing: calc(var(--half)/10);
+  margin: var(--half) 0;
 }
 
 h1 {
-  color: #fff;
-  font-size: 4em;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  font-size: calc(var(--half) * 6);
 }
 
-h4 {
-  font-size: 1.6em;
-  font-weight: 300;
-  margin: 0.6em 0;
+h2 {
+  font-size: calc(var(--half) * 3);
 }
 
-p {
-  font-size: 1em;
-  margin: 0.8em 0;
+p,
+li {
+  font-size: calc(var(--half) * 1.8);
+  line-height: calc(var(--half) * 4);
 }
 
-a {
-  text-decoration: none;
-}
-
-#main {
-  height: 100%;
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: auto;
+  grid-gap: calc(var(--half) * 4);
+  margin: 2em auto;
   width: 80%;
-  margin: auto;
-  font-family: 'Montserrat', sans-serif;
-}
-.left {
-  text-align: left;
-  width: 30%;
-  height: 300px;
-  padding: 0 1em;
-  margin-right: 3%;
-  float: left;
-  background-color: #fff;
+  height: 100%;
 }
 
-.left h4 {
-  position: relative;
-  top: 2em;
-  padding: 1em;
-  left: 0em;
-  line-height: 150%;
-}
-
-.right {
-  background-color: #fff;
-  text-align: left;
-  width: 63%;
-  height: 300px;
-  float: left;
-}
-
-.right p {
-  position: relative;
-  top: 4.8em;
-  left: 0.5em;
-  padding: 0 3em;
-  line-height: 150%;
+section {
+  padding: calc(var(--half) * 5);
 }
 
 .title {
-    background-color: rgb(75, 143, 214);
-    margin: 5em auto 2em;
-    padding: 8%;
-    text-align: center;
+  grid-column: span 2;
+  background-color: var(--light);
+  text-align: center;
+}
+
+.about,
+.use {
+  grid-column: span 1;
+  background-color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.contact {
+  grid-column: span 2;
+  box-shadow: var(--shadow);
+}
+
+.title h1,
+.title p {
+  color: var(--white);
+  margin-bottom: calc(var(--half) * 2);
+}
+
+.title p {
+  font-size: calc(var(--half) * 2.5);
+  letter-spacing: calc(var(--half)/10);
+}
+
+.about a,
+.contact a {
+  color: var(--dark);
+  font-weight: 700;
+}
+
+.about a:hover,
+.contact a:hover {
+  color: var(--light);
+  font-weight: 700;
+}
+
+
+ul {
+  margin: 1em -1.5em 2em;
 }
 
 hr {
-  border: 2px solid;
-  background: #444;
-  margin: 2em 0;
-  width: 6em;
+  background: var(--grey);
+  margin: var(--half) 0;
+  width: calc(var(--half) * 6);
+  height: calc(var(--half)/3);
 }
 
 .drag-icon {
@@ -93,28 +122,19 @@ hr {
   position: relative;
 }
 
-.link-container {
-  position: relative;
-  top: 2.5em;
-  margin: 5em 0em;
-}
-
 .bookmarklet-link {
-  background-color: rgb(75, 143, 214);
-  color: #fff;
-  font-size: 1.2em;
-  padding: 0.8em 15.3em;
+  background-color: var(--dark);
+  color: var(--white);
+  font-size: 1em;
+  padding: calc(var(--half) * 2);
   border-radius: 0.2em;
   text-decoration: none;
-  margin-bottom: 1em;
 }
 
 .bookmarklet-link:hover {
-  background-color: rgba(75, 143, 214, 0.8);
+  background-color: var(--light);
 }
 
-.instructions {
-  font-weight: 700;
-  font-size: 1.2em;
-  margin: 1.5em 0;
+.link-wrapper {
+  margin: 1em 0;
 }

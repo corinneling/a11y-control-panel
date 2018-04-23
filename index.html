@@ -1,36 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<style>
-	</style>
+	<title>Visual Accessibility Control Panel</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Change the aesthetics of any webpage with this minimalist control panel bookmarklet to make it more accessible.">
 	<link rel="stylesheet" href="styles/demo.css" />
 </head>
 
 <body>
-	<div id="main">
-		<div class="title">
-			<h1>Visual Accessibility
-				<br>
-				Control Panel</h1>
-		</div>
-		<div class="left">
-			<h4>Change the styling of any webpage to make it more accessible</h4>
-		</div>
-		<div class="right">
-			<p>A minimalistic control panel that allows users to change the aesthetics of a page making it more accessible,
-				 such as increasing contrast or font size. The accessibility icons expands on click, and each icon has a 
-				 tooltips instructing the user on its capabilities. <a href="https://github.com/corinneling/a11y-control-panel"> View on GitHub </a> </p>
-		</div>
-		<div class="link-container">
-			<p class="instructions">
-				Drag the button to your bookmarks toolbar or click it to test 
-				out the control panel on this page.
+	<main id="main" class="wrapper">
+		<section class="title">
+			<h1>
+				Visual Accessibility Control Panel
+			</h1>
+			<p>Change the styling of any webpage to make it more accessible</p>
+		</section>
+		<section class="about">
+			<h2>About This Bookmarklet</h2>
+			<hr>
+			<p>A minimalist control panel that allows users to change the aesthetics of a page to make it more accessible, such as increasing
+				contrast or font size. The accessibility icons expands on click, and each icon has a tooltip instructing the user on
+				its capabilities.
+				<a href="https://github.com/corinneling/a11y-control-panel" aria-label="View this project on GitHub">
+					View on GitHub
+				</a>
 			</p>
-			<a class="bookmarklet-link" href="javascript:(function()%7Bvar%20jsCode%20%3D%20document.createElement('script')%3BjsCode.setAttribute('src'%2C%20'https%3A%2F%2Fcorinneling.github.io%2Fa11y-control-panel%2Fscript%2Faesthetica11yBookmarklet.js')%3Bdocument.body.appendChild(jsCode)%7D)()">Accessibile Control Panel Bookmarklet -->
-		    </a>
-	</div>
-	</div>
+		</section>
+		<section class="use">
+			<h2>How to Use:</h2>
+			<hr>
+			<ul>
+				<li>Make sure your bookmarks bar is enabled</li>
+				<li>Drag the link below to your bookmarks bar</li>
+				<li>Click the link in your bookmarks bar on any webpage</li>
+			</ul>
+			<div class="link-wrapper">
+				<a class="bookmarklet-link" aria-label="Move this link to your bookmarks bar" href="javascript:(function()%7Bvar%20jsCode%20%3D%20document.createElement('script')%3BjsCode.setAttribute('src'%2C%20'https%3A%2F%2Fcorinneling.github.io%2Fa11y-control-panel%2Fscript%2Faesthetica11yBookmarklet.js')%3Bdocument.body.appendChild(jsCode)%7D)()">
+					Accessible Control Panel Bookmarklet
+				</a>
+			</div>
+		</section>
+		<section class="contact">
+			<h2>Contact</h2>
+			<hr>
+			<p>
+				I want to make this bookmarklet as user friendly as possible. So if you notice an issue with use or styling on a webpage
+				please
+				<a href="mailto:corinnealing@gmail.com">
+					email me
+				</a>
+				or
+				<a href="https://github.com/corinneling/a11y-control-panel/issues" target="_blank">
+					submit an issue on GitHub
+				</a>
+			</p>
+		</section>
+	</main>
 	<!-- <script src="./script/aesthetica11yBookmarklet.js"></script> -->
 </body>
 
