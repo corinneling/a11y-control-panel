@@ -1,7 +1,7 @@
 # A11y Control Panel (in development)
 ### Change the styling of any webpage to make it more accessible
 
-[Demo](https://corinneling.github.io/a11y-control-panel/test.html)
+[Demo](https://corinneling.github.io/a11y-control-panel/index.html)
 
 _Controls Include:_
 * Change Page Contrast
