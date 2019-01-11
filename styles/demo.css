@@ -34,7 +34,7 @@ h1,
 h2 {
   font-weight: 700;
   letter-spacing: calc(var(--half)/10);
-  margin: var(--half) 0;
+  margin: 0.5rem auto;
 }
 
 h1 {
@@ -48,7 +48,7 @@ h2 {
 p,
 .use li {
   font-size: calc(var(--half) * 2);
-  line-height: calc(var(--half) * 4);
+  line-height: 1.5;
 }
 
 #main {
@@ -66,7 +66,7 @@ p,
 }
 
 section {
-  padding: calc(var(--half) * 5);
+  padding: 3rem;
 }
 
 .title {
@@ -99,7 +99,6 @@ section {
 .title h1,
 .title p {
   color: var(--white);
-  margin-bottom: calc(var(--half) * 2);
 }
 
 .title p {
@@ -111,6 +110,7 @@ section {
 .contact a {
   color: var(--light);
   font-weight: 700;
+  text-decoration: none;
 }
 
 .about a:hover,
@@ -168,6 +168,7 @@ hr {
   top: 0;
   left: 1em;
   font-size: 1em;
+  line-height: 150%;
   font-weight: 400;
   font-style: italic;
 }
@@ -180,6 +181,9 @@ hr {
 }
 
 @media screen and (max-width: 400px) {
+  .bookmarklet-link {
+    margin: 1rem auto;
+  }
   .wrapper {
     margin: 0;
     width: 100%;

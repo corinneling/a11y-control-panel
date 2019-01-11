@@ -3,17 +3,17 @@
 
 <head>
 	<title>Style Control Panel for Accessibility</title>
-	<meta charset="utf-8">
 	<meta name="description" content="Change the aesthetics of any webpage with this minimalist control panel bookmarklet to make it more accessible.">
-	<link rel="stylesheet" href="styles/demo.css" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="styles/demo.css" />
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 
 <body>
 	<main id="main" class="wrapper">
 		<section class="title">
-			<h1>
-				Style Control Panel for Accessibility
-			</h1>
+			<h1>Control Panel for Visual Accessibility</h1>
 			<p>Change the styling of any webpage to make it more accessible</p>
 		</section>
 		<section class="about">
@@ -35,31 +35,24 @@
 				<li>Drag the link below to your bookmarks bar</li>
 				<li>Click the link in your bookmarks bar on any webpage</li>
 			</ul>
-			<a class="bookmarklet-link" aria-label="Move this link to your bookmarks bar" title="Control Panel Bookmarklet" href="javascript:(function()%7Bvar%20jsCode%20%3D%20document.createElement('script')%3BjsCode.setAttribute('src'%2C%20'https%3A%2F%2Fcorinneling.github.io%2Fa11y-control-panel%2Fscript%2Faesthetica11yBookmarklet.js')%3Bdocument.body.appendChild(jsCode)%7D)()">
-				Drag Me
-			</a>
-			<span class="alternative">&#8592; or click button to test</span>
+			<!-- <a class="bookmarklet-link" aria-label="Move this link to your bookmarks bar" title="Control Panel Bookmarklet" href="javascript:(function()%7Bvar%20jsCode%20%3D%20document.createElement('script')%3BjsCode.setAttribute('src'%2C%20'https%3A%2F%2Fcorinneling.github.io%2Fa11y-control-panel%2Fscript%2Faesthetica11yBookmarklet.js')%3Bdocument.body.appendChild(jsCode)%7D)()">
+				Visual A11y Bookmarklet
+			</a> -->
+			<p class="alternative">&#8593; Drag the button or click it to test</p>
 		</section>
 		<section class="contact">
 			<h2>Contact</h2>
 			<hr>
-			<p>
-				I want to make this bookmarklet as user friendly as possible. So if you notice an issue with use, styling, or accessibility
+			<p> I want to make this bookmarklet as user friendly as possible. So if you notice an issue with use, styling, or accessibility
 				with the control panel please
-				<a href="mailto:corinnealing@gmail.com">
-					email me
-				</a>
-				or
-				<a href="https://github.com/corinneling/a11y-control-panel/issues" target="_blank">
-					submit an issue on GitHub
-				</a>
+				<a href="mailto:corinnealing@gmail.com">email me</a> or <a href="https://github.com/corinneling/a11y-control-panel/issues" target="_blank">submit an issue on GitHub</a>
 			</p>
 		</section>
 	</main>
 	<footer class="footer">
 		<p>Made with Font Awesome, OpenDyslexic, and ❤</p>
 	</footer>
-	<!-- <script src="./script/aesthetica11yBookmarklet.js"></script> -->
+	<script src="./script/aesthetica11yBookmarklet.js"></script>
 </body>
 
 </html>
