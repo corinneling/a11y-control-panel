@@ -47,11 +47,11 @@ const aesthetica11y = {
     ];
     const markup = `
     <div tabindex="4" id="a11y-control-panel-wrapper">
-      <button aria-expanded="false" aria-label="Open" data-tooltip="Panel to Control Page Styling" data-placement="top" class="aesthetica11y__main-icon"></button>
-      <div class="aesthetica11y__container">
-        <ul class="aesthetica11y__list">
+      <button class="aesthetica11y-main-icon" aria-expanded="false" aria-label="Open" data-tooltip="Panel to Control Page Styling" data-placement="top"></button>
+      <div class="aesthetica11y-container">
+        <ul class="aesthetica11y-list">
         ${controls.map(controls =>
-          `<li class="aesthetica11y__item">
+          `<li class="aesthetica11y-list__item">
             <button class="aesthetica11y__button icon-${controls.icon}" aria-label="${controls.tooltip}" data-tooltip="${controls.tooltip}" data-placement="left"></button>
           </li>`
           ).join('')}
@@ -62,8 +62,8 @@ const aesthetica11y = {
     document.body.innerHTML += markup;
   },
   openControlPanel: function() {
-    const mainLink = document.querySelector('.aesthetica11y__main-icon');
-    const panelContainer = document.querySelector('.aesthetica11y__container');
+    const mainLink = document.querySelector('.aesthetica11y-main-icon');
+    const panelContainer = document.querySelector('.aesthetica11y-container');
     mainLink.addEventListener('click', () => {
       panelContainer.style.display == 'block' ? panelContainer.style.display = 'none' : panelContainer.style.display = 'block';
     });
