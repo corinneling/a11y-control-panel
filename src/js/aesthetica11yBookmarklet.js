@@ -4,7 +4,7 @@ const aesthetica11y = {
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    // link.href = 'https://corinneling.github.io/a11y-control-panel/styles/style.css';
+    link.href = 'https://corinneling.github.io/a11y-control-panel/styles/style.css';
     head.appendChild(link);
   },
   loadHTML: function() {
@@ -18,11 +18,11 @@ const aesthetica11y = {
       },
       {
         icon: `decrease`,
-        tooltip: 'Decrease font size'
+        tooltip: 'Decrease body font size'
       },
       {
         icon: `increase`,
-        tooltip: 'Increase font size'
+        tooltip: 'Increase body font size'
       },
       {
         icon: `underline`,
@@ -77,7 +77,7 @@ const aesthetica11y = {
   },
   prop1: function() {
     const icons = document.querySelectorAll('.aesthetica11y__button');
-    for (i = 0; i < icons.length; i++) {
+    for (var i = 0; i < icons.length; i++) {
       icons[i].style.backgroundColor == "" ? icons[i].style.backgroundColor = "#2B2B2B" : icons[i].style.backgroundColor = "";
     }
   },
@@ -99,7 +99,7 @@ const aesthetica11y = {
     }
   },
   prop3: function() {
-    const txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, li, a, span")
+    const txt = document.querySelectorAll("p, li, a, span")
     for (let i = 0; i < txt.length; i++) {
       childrenFont = window.getComputedStyle(txt[i]).getPropertyValue('font-size');
       currentSize = parseFloat(childrenFont);
@@ -107,7 +107,7 @@ const aesthetica11y = {
     }
   },
   prop4: function() {
-    const txt = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, li, a, span")
+    const txt = document.querySelectorAll("p, li, a, span")
     for (var i = 0; i < txt.length; i++) {
       childrenFont = window.getComputedStyle(txt[i]).getPropertyValue('font-size');
       currentSize = parseFloat(childrenFont);
